@@ -5,7 +5,7 @@ programa
 	
 	
 	cadeia decisao
-	inteiro vida_ghol = 100
+	inteiro vida_ghoul = 100
 	inteiro vida_mendigo = 100
 
 	funcao inicio() {
@@ -160,13 +160,73 @@ programa
 	}
 
 	funcao batalha(){
+		inteiro dano_posicao
+		inteiro sorteado
+		logico envenenado = falso
 
 		escreva("voce finalmente ve o mendigo ele realmente era um mendigo mas voce estava errado em pensar que ele era pobre porque ele e muito rico ")
 		printaMendigo()
 
-		
+		enquanto(vida_ghoul > 0 e vida_mendigo > 0) {
 
-		
+			escreva("VIDA GHOUL:", vida_ghoul, "\n")
+			escreva("VIDA MENDIGO:", vida_mendigo, "\n\n")
+
+			escreva("1 = cabeça 2 = torço 3 = braço_direito 4 = braço_esquerdo 5 = perna_direita 6 = perna_esquerda\n\n")
+			leia(dano_posicao)
+			
+			se(dano_posicao == 1){
+				sorteado = u.sorteia(1, 10)
+
+				se(sorteado == 5){
+					escreva("alguns falam que e sorte mas e sorte mesmo\n")
+					vida_mendigo = 0
+				} senao{
+					escreva("voce errou burro agora o mendigo tossiu na sua cara\n\n ")
+					envenenado = verdadeiro
+				}
+			}senao se(dano_posicao == 2) {
+
+				sorteado = u.sorteia(1, 10)
+
+				se(sorteado > 5){
+					escreva("voce acertou o torço e sangue sai da boca como um isguicho voando em voce\n")
+					vida_mendigo = vida_mendigo - 20
+				} senao {
+					escreva("voce errou burro agora o mendigo levanta os dois braços e da um mortal dando um chute na sua cara\n\n ")
+					vida_ghoul = vida_ghoul - 15
+				}
+
+				
+				
+			}senao se(dano_posicao == 3) {
+				
+			}senao se(dano_posicao == 4) {
+				
+			}senao se(dano_posicao == 5) {
+				
+			}senao se(dano_posicao == 6) {
+				
+			}
+
+			
+			
+			
+			se(envenenado == verdadeiro) {
+				escreva("vc está envenenado e sua vida está se esvaindo...\n\n")
+				vida_ghoul = vida_ghoul - 5
+			}
+			
+		}//fim da batalha
+
+		se (vida_ghoul <  1  e vida_mendigo < 1){
+			
+		} senao se (vida_mendigo < 1){
+			
+		}senao se(vida_ghoul < 1){
+			
+		}
+
 	}
 
 	funcao printaMendigo(){
