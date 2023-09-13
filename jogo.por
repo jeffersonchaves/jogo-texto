@@ -119,7 +119,9 @@ programa
 	}
 
 	funcao decisaoSairCasa(){
-		escreva("essa operaçao nao foi programada")
+		escreva("voce saiu da casa e se esqueceu que ta no brasil e leva uma bala perdida")
+		escreva("final sem reaçao porque morto nao tem reaçao mesmo")
+		escreva("final 5")
 	}
 
 	funcao cadeia lerDecisao(inteiro limite){
@@ -194,7 +196,7 @@ programa
 					vida_mendigo = vida_mendigo - 20
 				} senao {
 					escreva("voce errou burro agora o mendigo levanta os dois braços e da um mortal dando um chute na sua cara\n\n ")
-					vida_ghoul = vida_ghoul - 15
+					vida_ghoul = vida_ghoul - 100
 				}
 
 				
@@ -220,11 +222,13 @@ programa
 		}//fim da batalha
 
 		se (vida_ghoul <  1  e vida_mendigo < 1){
-			
+			escreva("voce mata o mendigo mas a veneno que ele te deu lhe matou tambem fazer oq")
 		} senao se (vida_mendigo < 1){
-			
+			escreva("voce matou o mendigo ebaaa")
 		}senao se(vida_ghoul < 1){
-			
+			escreva("voce desmaiou e voce acorda sem pele e sem membros o mendigo olha pra voce rindo da sua cara e solta ratos para comer a sua carne que resta voce sente cada mordida um rato entra no seus olhos e voce grita em desespero voce morre enquato o mendigo ri da sua cara com sua pele em suas maos\n")
+			escreva("final feliz amigo dos ratos\n")	
+			escreva("final 3\n")	
 		}
 
 	}
